@@ -1,5 +1,7 @@
 # MySQL → Obsidian Bases (CLI)
 
+[![PyPI version](https://img.shields.io/pypi/v/mysql-to-obsidian-bases.svg)](https://pypi.org/project/mysql-to-obsidian-bases/)
+
 Convert rows from a MySQL table into Obsidian notes with YAML frontmatter and generate a corresponding `.base` file for the Bases core plugin.
 
 ## Features
@@ -11,12 +13,20 @@ Convert rows from a MySQL table into Obsidian notes with YAML frontmatter and ge
 
 ## Install
 
+Recommended (pipx):
+
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
+pipx install mysql-to-obsidian-bases
 ```
+
+Or pip (user site):
+
+```bash
+python3 -m pip install --user mysql-to-obsidian-bases
+# Ensure ~/.local/bin is on PATH (Linux/macOS)
+```
+
+PyPI: https://pypi.org/project/mysql-to-obsidian-bases/
 
 ## Usage
 
@@ -111,6 +121,15 @@ mysql_to_obsidian_bases/
   type_inference.py
   markdown_generator.py
   base_generator.py
+```
+
+Developer install:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
 ```
 
 Run locally:
