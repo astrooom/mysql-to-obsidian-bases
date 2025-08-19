@@ -1,0 +1,9 @@
+# Local env and outputs
+.venv/
+output/
+
+# Python build artifacts
+dist/
+build/
+*.egg-info/
+**__pycache__

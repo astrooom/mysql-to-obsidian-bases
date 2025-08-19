@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mysql-to-obsidian-bases"
+version = "0.1.0"
+description = "Convert MySQL tables into Obsidian notes and Bases .base files"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Olle" }
+]
+license = { file = "LICENSE" }
+keywords = ["obsidian", "bases", "mysql", "markdown", "export", "cli"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Environment :: Console",
+  "Topic :: Utilities",
+]
+dependencies = [
+  "mysql-connector-python>=8.3",
+  "PyYAML>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/astrooom/mysql-to-obsidian-bases"
+Repository = "https://github.com/astrooom/mysql-to-obsidian-bases"
+Issues = "https://github.com/astrooom/mysql-to-obsidian-bases/issues"
+
+[project.scripts]
+mysql-to-bases = "mysql_to_obsidian_bases.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mysql_to_obsidian_bases*"]
